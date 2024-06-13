@@ -1,0 +1,58 @@
+body {
+    color:white;
+    background-image: url(BG.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Login 
+{
+	border:rgb(22, 39, 54, 0.7)	 1px solid;
+	height:500px;
+	width:400px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	margin-left:500px;
+	margin-top:100px;
+	background-color:rgb(22, 39, 54, 0.7);
+	color:white;
+	font-size:20px;
+}
+
+#Email, #Password 
+{
+	background-color:rgb(0, 0, 0, 0.6);
+	border-bottom:white 1px solid;
+	color:white;
+	width:250px;
+	height:25px;
+	font-family:Ledger;
+}
+
+#Submit 
+{
+	width:150px;
+	height:30px;
+	background-color:2BA2C8;
+	border: rgb(43, 162, 200) 1px solid;
+	color: white;
+	border-radius:20px;
+	margin-left:50px;
+	font-size:17px;
+}
+
+a
+{
+	text-decoration:none;
+	color:2BA2C8;
+	
+}
+
+#Logo 
+{
+	border-radius:90px;
+	height:80px;
+	margin-top:-100px;
+	margin-left:80px;
+}
