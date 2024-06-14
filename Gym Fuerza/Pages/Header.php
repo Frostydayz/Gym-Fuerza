@@ -78,6 +78,6 @@
         <a href ="HomePage.php">Homepage</a>
         <a href ="Calendar.php">Calendar</a>
         <a href ="MembersPage.php">Members</a>
-        <a href ="">Sales</a>
+        <a href ="SalesReport.php">Sales</a>
     </nav>
 </div>

@@ -62,7 +62,6 @@ if ($count > 0) {
 
     //Retrieving GymGoerID
     $gymGoerID = $connect->insert_id;
-
     
     //Select Amount Earned
     $selectAmount = "SELECT discount.isStudent, discount.isMember, discount.AmountEarned

@@ -160,6 +160,7 @@ form {
     justify-content: center;
     max-height: 450px;
     overflow-y: scroll;
+    
 }
 #tblLogs {
     width: 95%;
@@ -176,4 +177,10 @@ form {
 #Logs th {
     width: 50px;
     font-size: 18px;
+    background-color: #ccc;
+    color: rgba(22, 27, 52);
+}
+
+#startDay {
+    margin-left: 40%;
 }

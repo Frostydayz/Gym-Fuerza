@@ -79,15 +79,30 @@
                     
                     <input type="submit" value="Submit" id="submit">
                 </form>
+
+                <form id="startDay" action="../PHP/startDay.php" method="post">
+                    <button type="button" id="confirmButton">Start New Day</button>    
+                    <button type="submit" id="submitButton" style="display: none;">Submit Data</button>
+               </form>
             </div>
             <div id="Logs">
                 <table id="tblLogs">
                     <?php
                         include("../PHP/DisplayTable.php");
                     ?>
-                    </tbody>
+                    </tbody>    
                 </table>
             </div>
         </div>
     </body>
+
+    <script>
+            document.getElementById("confirmButton").addEventListener("click", function() {
+            var confirmed = confirm("Are you sure you want to Start a new Day?");
+            if (confirmed) {
+            document.getElementById("submitButton").click();
+            }
+        });
+
+    </script>
 </html>

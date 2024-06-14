@@ -38,8 +38,8 @@
                 <br>
                 <label for="M_Type">Membership Type:</label>
                 <select name="M_Type" id="Membership">
-                    <option value="Non-Member">Non-Member</option>
                     <option value="Member">Member</option>
+                    <option value="Non-Member">Non-Member</option>
                 </select>
                 <br>
                 <br>

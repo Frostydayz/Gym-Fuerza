@@ -5,11 +5,11 @@
     $Membership = $_POST['M_Type'];
     $DiscountID = 0;
     
-    if ($Membership == "Members" && $Discount == "Students") {
+    if ($Membership == "Member" && $Discount == "Students") {
         $DiscountID = 1;
-    } else if ($Membership == "Members" && $Discount == "Regulars") {
+    } else if ($Membership == "Member" && $Discount == "Regulars") {
         $DiscountID = 2;
-    } else if ($Membership == "NonMembers" && $Discount == "Students") {
+    } else if ($Membership == "Non-Member" && $Discount == "Students") {
         $DiscountID = 3;
     } else {
         $DiscountID = 4;  
