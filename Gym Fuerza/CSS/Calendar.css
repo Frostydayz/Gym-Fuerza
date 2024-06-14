@@ -3,6 +3,8 @@ body {
     background-image: url(../Images/BG.png);
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 
 /* START OF HEADER */
@@ -77,52 +79,97 @@ div.TimeBox {
     display: flex;
 }
 
-/* End of Header */
+/* Calendar Div */
+
+#Calendar {
+    display: grid;
+}
 
 
 /* Calendar Header */
 
 #CalendarNav {
-    position: absolute;
-    top: 14%;
-    right: 25%;
-    gap: 5%;
-    height: 12%;
-    width: 40%;
-    padding: 2%;
+    position: relative;
+    top: -100%;
+    left: 40%;
+    padding: 1% 2% 1% 0%;
     display: grid;
-    grid-template-columns: 50% 50%;
-    align-content: center;
     justify-content: center;
-}
-
-#PeriodicNav {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 2%;
-    flex-direction: row;
-    border: 2px solid black;
-    padding: 2%;
+    align-items: center;
+    width: 55%;
 }
 
 #Sales {
-    flex-direction: row;
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 2%;
     padding: 2%;
+    height: 125%;
+    justify-content: center;
 }
 
-#YearButton, #MonthButton, #ViewSales, #BackButton {
-    height: auto;
+#ViewSales, #BackButton {
     color: white;
-    border: none;
     cursor: pointer;
     border: 2px solid black;
-    border-radius: 5px;
+    padding: 1% 25px;
+    border-radius: 2px;
+    color: black;
 }
 
 #BackButton {
-    display: none;
+    visibility: hidden;
 }
 
+/* Calendar Body Start */
+
+#CalendarBody {
+    border: 3px solid white;
+    display: flex;
+    position: relative;
+    top: -50%;
+    margin: 0% 3%;
+    height: 500%;
+    background-color: rgb(23, 39, 52, 0.8);
+    justify-content: center;
+    align-items: center;   
+}
+
+#Yearly {
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;   
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+#Yearly > div {
+    border: 1px solid white;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    justify-items: center;
+    align-content: center;
+}
+
+#Monthly {
+    border: 2px solid black;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33% 33% 33%;
+} 
+
+#Monthly > div {
+    border: 1px solid white;
+    height: 100%;
+    justify-items: center;
+    align-content: center;
+}
