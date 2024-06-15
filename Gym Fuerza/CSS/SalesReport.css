@@ -79,28 +79,24 @@ div.TimeBox {
 
 
 #tblTitle {
-    background-color: rgba(22, 27, 52);
+    background-color: rgba(22, 27, 52, .9);
     font-size: large;
     font-weight: bold;
     height: 50px;
     align-items: center;
     justify-content: center;
-    border-bottom-color: black;
 }
 
 th {
     background-color: #ccc;
     color: rgba(22, 27, 52);
     font-weight: lighter;
-    border: black 1px solid;
-    border-left: white 2px solid;
-    border-right: white 2px solid;
-    border-bottom: black 2px solid;
+    border: white 2px solid;
 }
 
 table td{
     border: white 2px solid;
-    background-color: rgba(22, 27, 52);
+    background-color: rgba(22, 27, 52, .9);
     color: white;
     text-align: center;
 }

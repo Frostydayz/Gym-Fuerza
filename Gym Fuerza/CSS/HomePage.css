@@ -119,14 +119,14 @@ div.TimeBox {
 
 #submit {
     width: 100px;
-    background-color: rgba(4, 37, 200, 0.664);
-    border:none;
+    background-color: rgba(36, 144, 160, 0.664);
     border-radius: 3px;
+    border: none;
     text-align: center;
     padding-top: 1%;
     padding-bottom: 1%;
-    font-weight: bold;
     font-size: 14px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 form {
@@ -159,9 +159,17 @@ form {
     align-items: center;
     justify-content: center;
     max-height: 450px;
-    overflow-y: scroll;
+    overflow-y: scroll; 
     
 }
+
+#Total, #TotalNum {
+    background-color: #bcbaba;
+    color: rgba(22, 27, 52);
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
 #tblLogs {
     width: 95%;
 }
@@ -177,8 +185,8 @@ form {
 #Logs th {
     width: 50px;
     font-size: 18px;
-    background-color: #ccc;
-    color: rgba(22, 27, 52);
+    background-color: rgba(24, 155, 185, 0.7);
+    color: white;
 }
 
 #startDay {

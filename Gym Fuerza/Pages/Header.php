@@ -62,6 +62,22 @@
         }
 </script>
 
+<style>
+.modal {
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+</style>
+
 <div id="Header">
     <div id="LocaleTime">
         <div> 
@@ -78,6 +94,8 @@
         <a href ="HomePage.php">Homepage</a>
         <a href ="Calendar.php">Calendar</a>
         <a href ="MembersPage.php">Members</a>
-        <a href ="SalesReport.php">Sales</a>
+        <a href ="SalesReport.php" id="openModal">Sales</a>
     </nav>
+</div>
+
 </div>

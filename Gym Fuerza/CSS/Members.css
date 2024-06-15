@@ -8,6 +8,8 @@ body {
 #MembersBody {
     width: 100%;
     padding: 2%;
+    display: grid;
+    grid-gap: 1%;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -89,7 +91,7 @@ div.TimeBox {
 
 
 table.MemberList {
-    width: 100%;
+    width:70%;
     border-collapse: collapse;
 }
 
@@ -102,7 +104,7 @@ table.MemberList thead tr.Header th {
 
 table.MemberList th,
 table.MemberList td {
-    background-color: rgb(55, 69, 80, 0.7);
+    background-color: rgba(22, 27, 52, 0.8);
     border: 2px solid white;
     padding: 10px;
     text-align: center;
@@ -130,9 +132,11 @@ table.MemberList tbody tr:last-child td {
 
 #tblMlist {
     border-collapse: collapse;
+    background-color: black;
 }
+
 #tblMlist tr, #tblMlist td {
-    border: black 1px solid;
+    border: none;
     border-collapse: collapse;
 }
 #MembersConfigure {
@@ -141,9 +145,14 @@ table.MemberList tbody tr:last-child td {
     background-color: #f4f4f4;
 }
 
-tbody {
-    max-height: 500px;
-    overflow-y:scroll ;
+#Citizenship {
+    font-size: 18px;
+    background-color:white;
+    color: white;
+}
+
+#ttlVisitors td {
+    border: white 2px solid;
 }
 
 
@@ -172,32 +181,36 @@ tbody {
 }
 
 #modalEdit {
-    border: black 1px solid;
-    color: black;
-    background-color: rgb(173, 242, 185);
+    border: 2px white solid;
+    color: white;
+    background-color: #162736;
     min-height: 100px;
     min-width: 300px;
-    height: 200px;
+    height: 240px;
     width: 330px;
-    position: absolute;
-    left: 70%;
+    position: fixed;
+    left: 40%;
+    top: 40%;
     display:none;
-    text-align: left;
     padding: 1%;
-}
-
-#modalEdit label {
-    font-family: sans-serif;
+    border-radius: 2px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 #Name {
-    background-color: rgb(148, 210, 159);
+    background-color: rgb(217, 217, 217, .88);
     border: none;
+    width: 60%;
+    margin-top: 3%;
 }
 
 #modalEdit #Membership,#Discount {
     border: black 1px solid;
-    background-color: rgb(148, 210, 159);
+    background-color: rgb(217, 217, 217, .88);
+    width: 60%;
+    margin-top: 3%;
 }
 
 #modalAdd {
@@ -220,12 +233,16 @@ tbody {
     height: 25px;
     font-size: 16px;
     background-color: rgb(6, 145, 8);
-    border: none;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     position: absolute;
     bottom: 5%;
-    right: 5%;
+    right: 39%;
+    color: white;
+    border: none;
+    border-bottom: black 3px solid;
+    border-right: black 2px solid;
+    border-radius: 2px; 
 }
 
 #close {
@@ -235,11 +252,16 @@ tbody {
 }
 
 #btnClose {
-    background-color: red;
+    background-color: rgb(186, 9, 9);
     color:white;
+    border-radius: 5px;
+    border: none;
+    border-bottom: black 2px solid;
+    border-right: black 1px solid;
+
 }
 
 #btnCloseAdd {
-    background-color: red;
+    background-color: rgb(186, 9, 9);
     color:white;
 }

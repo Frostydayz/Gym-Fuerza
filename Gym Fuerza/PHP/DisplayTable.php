@@ -2,7 +2,7 @@
 //connecting
 $connect = new mysqli('localhost', 'root', '', 'gym_fuerza');
 
-$SelectQuery = "SELECT logs.TimeIn, logs.LogsID, gymgoer.Name, discount.isMember, discount.isStudent, discount.AmountEarned
+$SelectQuery = "SELECT logs.TimeIn, logs.LogsID, gymgoer.Name, discount.isMember, discount.isStudent, logs.AmountEarned
                 FROM logs
                 JOIN gymgoer ON logs.GymgoerID = gymgoer.GymgoerID
                 INNER JOIN discount ON gymgoer.DiscountID =  discount.DiscountID
@@ -56,9 +56,9 @@ if ($CreateTBL->num_rows > 0) {
                 <td>" . $M_Type . "</td>
                 <td>" . $D_Type . "</td>
                 <td>" . $row["AmountEarned"] . "</td>
-            </tr>";
+            </tr>"; 
     }
-        echo "<tr><td id='Total' colspan='5'> Total Amount: </td> <td>" . $totalAmount . "</td></tr>"; 
+        echo "<tr><td id='Total' colspan='5'> Total Amount: </td> <td id='TotalNum'>" . $totalAmount . "</td></tr>"; 
 
 } else {
     echo "<tr><td colspan='5'>0 results</td></tr>";

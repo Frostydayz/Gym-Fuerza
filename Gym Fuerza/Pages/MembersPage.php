@@ -26,24 +26,27 @@
     -->
         <div id="modalEdit">
             <form id="formEdit" action="../PHP/edit.php" method="POST">
-                <label for="Name">Name:</label>
+                <label for="Name">Name</label>
+                <br>
                 <input type="hidden" name="id" id="id">
                 <input type="text" name="Name" id="Name">
                 <div id="close">
-                    <button id="btnClose" Value="X"onclick="closeEdit()">
+                    <button type="button" id="btnClose" Value="X" onclick="closeModalEdit()">
                         X
                     </button>
                 </div>
                 <br>
                 <br>
-                <label for="M_Type">Membership Type:</label>
+                <label for="M_Type">Membership Type</label>
+                <br>
                 <select name="M_Type" id="Membership">
                     <option value="Member">Member</option>
                     <option value="Non-Member">Non-Member</option>
                 </select>
                 <br>
                 <br>
-                <label for="D_Type">Discount Type:</label>
+                <label for="D_Type">Discount Type</label>
+                <br>
                 <select name="D_Type" id="Discount">
                     <option value="Students">Student</option>
                     <option value="Regulars">Regular</option>
@@ -53,7 +56,7 @@
                 <input type="submit" value="Save" id="submit">
             </form>
         </div>
-
+<!--
         <div id="modalAdd">
             <form action="">
                 <label for="NameAdd">Name:</label>
@@ -72,6 +75,7 @@
                 <input type="submit" value="Save" id="submit" onclick=closeAdd()>
             </form>
         </div>
+-->
     </div>
 
     <script>
@@ -117,6 +121,11 @@
 
         function closeAdd() {
             document.getElementById("modalAdd").style.display = "none";   
+        }
+
+        function closeModalEdit() {
+            document.getElementById("modalEdit").style.display = "none";   
+
         }
         
     </script>
