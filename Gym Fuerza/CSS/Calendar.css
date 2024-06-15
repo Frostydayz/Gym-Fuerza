@@ -3,6 +3,9 @@ body {
     background-image: url(../Images/BG.png);
     background-repeat: no-repeat;
     background-size: cover;
+    flex-direction: column;
+    display: flex;
+    overflow-y: scroll;
 }
 
 /* START OF HEADER */
@@ -77,52 +80,162 @@ div.TimeBox {
     display: flex;
 }
 
-/* End of Header */
+/* Calendar Div */
 
+#Calendar {
+    display: grid;
+    margin: 0;
+    padding: 0;
+}
 
 /* Calendar Header */
 
 #CalendarNav {
-    position: absolute;
-    top: 14%;
-    right: 25%;
-    gap: 5%;
-    height: 12%;
-    width: 40%;
-    padding: 2%;
+    position: relative;
+    top: -120%;
+    left: 40%;
+    padding: 1% 2% 1% 0%;
     display: grid;
-    grid-template-columns: 50% 50%;
-    align-content: center;
     justify-content: center;
-}
-
-#PeriodicNav {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 2%;
-    flex-direction: row;
-    border: 2px solid black;
-    padding: 2%;
+    align-items: center;
+    width: 55%;
 }
 
 #Sales {
-    flex-direction: row;
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 2%;
     padding: 2%;
+    height: 125%;
+    justify-content: center;
 }
 
-#YearButton, #MonthButton, #ViewSales, #BackButton {
-    height: auto;
+#ViewSales, #BackButton {
     color: white;
-    border: none;
     cursor: pointer;
     border: 2px solid black;
-    border-radius: 5px;
+    padding: 1% 25px;
+    border-radius: 2px;
+    color: black;
 }
 
 #BackButton {
-    display: none;
+    visibility: hidden;
+}
+
+/* Calendar Body Start */
+
+#CalendarBody {
+    border: 3px solid white;
+    display: flex;
+    top: -15%;
+    margin: 0% 3%;
+    height: 550px;
+    background-color: rgb(23, 39, 52, 0.8);
+    justify-content: center;
+    align-items: center;   
+    position: relative;
+}
+
+#Yearly, #Monthly, #Daily {
+    border: 1px solid white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+#Yearly {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    opacity: 1;
+    pointer-events: all ;
+}
+
+#Monthly {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    opacity: 0;
+    pointer-events: none;
+} 
+
+#Daily {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 10% 90%;
+    opacity: 0;
+    pointer-events: none;
+    color: white;
+    border: 1px solid white;
+}
+
+#Daily .DailyHeader {
+    font-size: 24px;
+    font-weight: 600;
+    grid-column: span 7;
+}
+
+#Daily .DailyHeader .MonthYear {
+    padding: 10px 0;
+}
+
+#Daily > div.DaysBody {
+    display: grid;
+    grid-column: span 7;
+    grid-template-rows: repeat(7, 1fr);
+}
+
+#Daily > div.DaysBody > div.Days {
+    display: grid;
+    grid-column: span 7;
+    height: 100%;
+    grid-template-columns: repeat(7, 1fr);
+    border: 1px solid white;
+}
+
+#Daily > div.DaysBody > div.Days > div.Day {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    border: 1px solid white;
+    font-size: 18px;
+}
+
+#Daily > div.DaysBody > div.Dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-row: span 7;
+    grid-column: span 7;
+    border: 1px solid white;
+    font-family: Coiny, 'Times New Roman', Times, serif
+}
+
+#Daily > div.DaysBody > div.Dates > div.Date {
+    border: 1px solid white;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0;
+    font-family: Englebert, 'Times New Roman', Times, serif
+}
+
+#Yearly > div.Year:hover, #Monthly > div.Month:hover, #Daily > div.Date:hover {
+    background-color: #FCFF77;
+    color: black ;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}   
+
+
+#Yearly > div, #Monthly > div {
+    border: 1px solid white;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: background-color 0.3s ease; 
+    align-content: center;
+    justify-items: center;
 }
 
